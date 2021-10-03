@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Nguyễn Văn Hoan-CV</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Nguyễn Văn Hoan</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About Me</a></li>
+            <li><a href="#project" onclick="toggleMenu();">My Project</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner" id="home">
+        <div class="textBx">
+            <h2>Hello, I'm <br /><span>Nguyen Van Hoan</span></h2>
+            <h3>I'm a Front End Web Developer, student at MTA</h3>
+            <a href="#about" class="btn">About Me</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx">
+                <h3>I'm Nguyen Van Hoan</h3>
+                <br />
+                <h4>Student at MTA</h4>
+                <br />
+                <p class="pageContent">
+                    I’m actively looking for an Internship as a Front-end Developer. I just need a good platform and a leader to follow for my next 2-3 year of my career. Please let me know and refer me if you have any opening in your respective companies.
+                </p>
+            </div>
+
+            <div class="w50">
+                <img src="./image/about.jpg" class="img aboutImg" />
+            </div>
+        </div>
+    </section>
+
+    <section class="project" id="project">
+        <div class="heading white">
+            <h2>My Project</h2>
+            <br />
+            <p>Check out some of my projects...</p>
+        </div>
+        <div class="content">
+            <div class="projectBX">
+                <img src="./image/musicicon.png" />
+                <h2>Music Player</h2>
+                <br />
+                <p>
+                    <a href="https://justhoann.github.io/music_hoan/">Demo</a>
+                </p>
+                <br />
+                <p><a href="https://github.com/justhoann/music_hoan">GitHub</a></p>
+            </div>
+            <div class="projectBX">
+                <img src="https://play-lh.googleusercontent.com/PH-2iORSfQs-iizoHzePXBaJCXml443pgoC14-lZESLFIp78A4SvxLKUVv1FyIQFtC8" />
+                <h2>To Do</h2>
+                <br />
+                <p>
+                    <a href="#">Demo</a>
+                </p>
+                <br />
+                <p><a href="https://github.com/justhoann/Todo">GitHub</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="heading white">
+            <h2>Contact</h2>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Contact Info</h3>
+                <div class="contactInfoBx">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>
+                                Dan Phuong<br />Ha Noi<br /> Viet Nam
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+84357772898</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>nguyenvanhoan.hvktqs@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>Nguyen Van Hoan_MyCV</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            var menuToggle = document.querySelector(".toggle");
+            var menu = document.querySelector(".menu");
+            menuToggle.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>
